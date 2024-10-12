@@ -48,8 +48,9 @@ func main() {
 			InputSource: &pb.SynthesisInput_Text{Text: text},
 		},
 		Voice: &pb.VoiceSelectionParams{
-			LanguageCode: "en-US",
-			Name:         "en-US-Wavenet-D",
+			LanguageCode: langCode,
+			Name:         voice,
+			SsmlGender:   pb.SsmlVoiceGender_MALE,
 		},
 		AudioConfig: &pb.AudioConfig{
 			AudioEncoding: pb.AudioEncoding_LINEAR16,
